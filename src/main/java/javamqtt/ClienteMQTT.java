@@ -24,7 +24,7 @@ public class ClienteMQTT implements MqttCallbackExtended {
 
         mqttOptions = new MqttConnectOptions();
         mqttOptions.setMaxInflight(200);
-        mqttOptions.setConnectionTimeout(3);
+        mqttOptions.setConnectionTimeout(5);
         mqttOptions.setKeepAliveInterval(10);
         mqttOptions.setAutomaticReconnect(true);
         mqttOptions.setCleanSession(false);

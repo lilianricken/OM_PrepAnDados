@@ -1,4 +1,4 @@
-import Classifier.RFClassifier;
+import Classifier.JRipClassifier;
 import javamqtt.ClienteMQTT;
 
 public class Main {
@@ -8,11 +8,11 @@ public class Main {
                 null, null);
         clienteMQTT.iniciar();
 
-        RFClassifier rfClassifier = new RFClassifier();
+        JRipClassifier jRip = new JRipClassifier();
 
         while (true) {
-            String alerta = rfClassifier.RandomForestClassifier();
-            clienteMQTT.publicar("PUCPR/OMIoT/A85DE0A994EEEED17BD0229875B5F585/alerta/teste",
+            String alerta = jRip.RandomForestClassifier();
+            clienteMQTT.publicar("PUCPR/OMIoT/A85DE0A994EEEED17BD0229875B5F585/alerta/",
                     alerta.getBytes(), 0);
         }
     }
