@@ -23,7 +23,7 @@ public class JRipClassifier {
 
         jRip.buildClassifier(insTreino);
 
-        File file = new File("/home2/ead2020/SEM2/ricardo.feldens/pcap-processado-SynAckFin.csv");
+        File file = new File("newAccess.csv");
         try (
                 FileReader fileReader = new FileReader(file);
                 BufferedReader bufferedReader = new BufferedReader(fileReader)) {

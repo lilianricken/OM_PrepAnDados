@@ -12,6 +12,7 @@ public class Main {
 
         while (true) {
             String alerta = jRip.RandomForestClassifier();
+            System.out.println(alerta);
             clienteMQTT.publicar("PUCPR/OMIoT/A85DE0A994EEEED17BD0229875B5F585/alerta/",
                     alerta.getBytes(), 0);
         }
